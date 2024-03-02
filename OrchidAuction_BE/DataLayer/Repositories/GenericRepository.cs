@@ -2,17 +2,18 @@
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore.Storage;
-using STARAS.DataLayer.Models;
+using DataLayer.Models;
 using System.Linq.Expressions;
+using DataLayer.Repositories;
 
-namespace STARAS.DataLayer.Repositories
+namespace DataLayer.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private static StarasContext Context;
+        private static OrchidAuctionContext Context;
         private static DbSet<T> Table { get; set; }
 
-        public GenericRepository(StarasContext context)
+        public GenericRepository(OrchidAuctionContext context)
         {
             Context = context;
             Table = Context.Set<T>();

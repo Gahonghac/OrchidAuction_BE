@@ -1,7 +1,5 @@
 ﻿using DataLayer.Models;
 using DataLayer.Repositories;
-using DataLayer.UnitOfWork;
-using DataLayer.Repositories;
 using System.ComponentModel.DataAnnotations;
 
 namespace DataLayer.UnitOfWork
